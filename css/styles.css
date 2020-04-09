@@ -1,0 +1,95 @@
+
+
+body {
+  background-color: #FFD7D7;
+}
+
+#btn {
+  float: center;
+  padding-left: 457px;
+}
+
+#dice {
+  border:solid 3px black;
+  height: 90px;
+  width: 83px;
+  float: right;
+}
+
+#column1 {
+  float: left;
+}
+
+#column2 {
+  float: right;
+}
+
+.col-xs-4 {
+  background-color: #FFC3C3; 
+  border: solid 2px;
+}
+
+h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding-left: 415px;
+}
+
+h2 {
+ float: center;
+}
+
+h3 {
+  padding-left: 415px;
+}
+
+img {
+  width: 200px;
+}
+
+p {
+  font-size: larger;
+}
+
+.panel-head {
+  background-color: #FFC3C3;
+}
+
+.panel-panel-default {
+  background-color: #FFC3C3;
+}
+
+#player1 {
+  padding-top: 40px;
+}
+
+#ride2 {
+  float: right;
+}
+
+#tagline {
+  padding-left: 210px;
+}
+
+#reward {
+  display: none;
+  padding-left: 420px;
+}
+
+.tutorial {
+  background-color: #FFC3C3;
+  border: solid 2px;
+}
+
+#shirt {
+  width: 380px;
+}
+
+#theHub {
+  /* display: none; */
+  padding-top: 200px;
+} 
+
+
+
+
+/* yeet */

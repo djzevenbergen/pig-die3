@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <!--<link rel="stylesheet" href="css/stylus.styl">-->
+  <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <title></title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Pig Die</h1>
+    <img src="https://thumbs.gfycat.com/DeafeningLimpingAsianlion-size_restricted.gif" id="ride1">
+    <img src="https://thumbs.gfycat.com/IllustriousWealthyBluetonguelizard-small.gif" id="ride2">
+    <br>
+    <br>
+    <p id="tagline">Pig Die is a fun dice game that a whole family of two people can enjoy!</p>
+    <div class="tutorial">
+      <h3>How to Play:</h3>
+      <ul>
+        <li>The first player rolls the dice. If they land on 1 they get no points and have to end their turn.</li>
+        <li>If the player lands on anything else they can choose to keep rolling or to "hold".</li>
+        <li>If the player keeps rolling, each number they land on is added to their total score until they choose to
+          hold(end their turn) or
+          until they land on 1, in which case their turn ends anyway AND they lose all the points they could have made
+          in
+          that turn.
+        </li>
+        <li>Repeat with player 2.</li>
+        <li>First player to make it to 100 points in their total(or more) wins!</li>
+      </ul>
+    </div>
+
+    <form id="register">
+      <div class="row">
+        <div id="column1">
+          <div id="player1">
+            <p>Enter player one's name:</p>
+            <label for="playerOneName">Player One:</label>
+            <input type="text" id="playerOneName">
+          </div>
+        </div>
+        <br>
+        <br>
+        <div id="column2">
+          <div id="player2">
+            <p>Enter player two's name:</p>
+            <label for="playerTwoName">Player Two:</label>
+            <input type="text" id="playerTwoName">
+          </div>
+        </div>
+        <br>
+        <div id="btn">
+          <button type="submit">Start</button>
+        </div>
+      </div>
+    </form>
+
+
+    <div class="row" id="theHub">
+      <div class="col-xs-4">
+        <div class="panel-panel-default">
+          <div class="panel-head">
+            <h2 id="playerOneNameDisplay"></h2>
+            <div class="panel-body">
+              <p>Turn Score: <span id="turnScorePlayer1"></span></p>
+              <p>Total Score: <span id="totalScorePlayer1"></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-4">
+        <div class="panel-panel-default">
+          <div class="panel-head">
+            <h2 id="gameStatus">Current Turn</h2>
+            <div class="panel-body">
+              <p><span id="turnDisplay"></span>'s Turn</p>
+              <p> Roll = <span id="rollDisplay"></span></p>
+              <button type="button" id="rollButton">Roll!</button>
+              <button type="button" id="endTurnButton">Hold</button>
+              <div id="dice">
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-xs-4">
+        <div class="panel-panel-default">
+          <div class="panel-head">
+            <h2 id="playerTwoNameDisplay"></h2>
+            <div class="panel-body">
+              <p>Turn Score: <span id="turnScorePlayer2"></span></p>
+              <p>Total Score: <span id="totalScorePlayer2"></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="reward">
+      <h2>Congratulations! You won!</h2>
+      <br>
+      <img src="https://images-na.ssl-images-amazon.com/images/I/61-7gFyogCL._UX385_.jpg" id="shirt">
+      <!--<audio src="sounds/congratulations.mp3"></audio>-->
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>&copy; 2004 all rights reserved
+  </div>
+</body>
+
+</html>
+
+
+
+
+
+<!--
+|---------------| |---------------| |---------------| 
+| Player One    | |   Player one's| | Player Two:   |
+| Turn Score:   | |     Turn      | | Turn Score:   |               
+| Total Score:  | |    * * *    6 | | Total Score:  |
+|               | |    * * *      | |               |
+|               | |    * * *      | |               |
+|_______________| |_______________| |_______________|          
+
+
+-->
