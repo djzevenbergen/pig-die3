@@ -66,19 +66,29 @@ Game.prototype.roll = function () {
   //console.log(number);
   return number;
 }
-snd = new Audio("sounds/congratulations.mp3");
+
 Game.prototype.endTurn = function (turn) {
+  var snd = new Audio("sounds/congratulations.mp3");
   var index = turn - 1;
   var holdPoints = this.players[index].turnScore;
   $("#dice").html("");
   this.players[index].totalScore += holdPoints;
 
   if (this.players[index].totalScore >= 20) {
-
+    var modal = document.getElementById("myModal");
+    var close = document.getElementById("close");
     snd.play();
-    alert(this.players[index].name + " is the Winner!");
+    $("#reward").show();
+
+    modal.style.display = "block";
+
+    close.onclick = function () {
+      modal.style.display = "none";
+      window.location.reload();
+    }
+    $("#winnerName").text(this.players[index].name)
+
     $("#totalScorePlayer" + turn).text(this.players[index].totalScore);
-    window.location.reload();
   }
 
   $("#totalScorePlayer" + turn).text(this.players[index].totalScore);
@@ -123,6 +133,9 @@ $(document).ready(function () {
 
     game.addPlayer(pOne);
     game.addPlayer(pTwo);
+
+    $("#register").hide();
+    $("#theHub").slideDown();
 
     $("#playerOneNameDisplay").text(pOne.name);
     $("#playerTwoNameDisplay").text(pTwo.name);
